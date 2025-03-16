@@ -20,6 +20,8 @@ We introduce [**SimEval**](https://dl.acm.org/doi/abs/10.1145/3658617.3697624), 
 │── README.md                   # Instructions on how to use the repo
 ```
 
+### Usage
+
 Install the necessary dependencies
 
 ```bash
@@ -36,7 +38,6 @@ Compare two Verilog files based on different similarity methods
 ```bash
 python main.py <file1.v> <file2.v> --method <ast|cfg|netlist>
 ```
-
 
 ### Data Folder
 The ```data/``` folder contains sample RTL codes and their corresponding synthesized netlists for testing similarity evaluation.
