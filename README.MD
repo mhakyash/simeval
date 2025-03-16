@@ -15,8 +15,8 @@ verilog_similarity_checker/
 │   ├── utils.py                # Common utility functions
 │── main.py                     # CLI entry point
 │── data/                       # Sample RTL codes and corresponding netlists
-│   ├── verilog/
-│   ├── netlist/
+│   ├── verilogs/
+│   ├── netlists/
 │── requirements.txt            # Required Python libraries
 │── README.md                   # Instructions on how to use the repo
 ```
