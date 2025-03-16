@@ -7,7 +7,6 @@ We introduce [**SimEval**](https://dl.acm.org/doi/abs/10.1145/3658617.3697624), 
 
 ### Repository Structure
 ```plaintext
-verilog_similarity_checker/
 │── scripts/
 │   ├── ast_similarity.py       # AST-based similarity comparison
 │   ├── cfg_similarity.py       # CFG-based similarity comparison
