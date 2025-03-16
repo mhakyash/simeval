@@ -1,0 +1,4 @@
+pyverilog
+networkx
+numpy
+grakel

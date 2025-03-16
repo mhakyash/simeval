@@ -1,0 +1,180 @@
+// Benchmark "axi4_lite_ip_core" written by ABC on Wed Jun 26 15:22:02 2024
+
+module axi4_lite_ip_core ( clock, 
+    ACLK, ARESETn, S00_AXI_AWVALID, \S00_AXI_AWADDR[0] ,
+    \S00_AXI_AWADDR[1] , \S00_AXI_AWADDR[2] , \S00_AXI_AWADDR[3] ,
+    \S00_AXI_AWADDR[4] , \S00_AXI_AWADDR[5] , \S00_AXI_AWADDR[6] ,
+    \S00_AXI_AWADDR[7] , \S00_AXI_AWADDR[8] , \S00_AXI_AWADDR[9] ,
+    \S00_AXI_AWADDR[10] , \S00_AXI_AWADDR[11] , \S00_AXI_AWADDR[12] ,
+    \S00_AXI_AWADDR[13] , \S00_AXI_AWADDR[14] , \S00_AXI_AWADDR[15] ,
+    \S00_AXI_AWADDR[16] , \S00_AXI_AWADDR[17] , \S00_AXI_AWADDR[18] ,
+    \S00_AXI_AWADDR[19] , \S00_AXI_AWADDR[20] , \S00_AXI_AWADDR[21] ,
+    \S00_AXI_AWADDR[22] , \S00_AXI_AWADDR[23] , \S00_AXI_AWADDR[24] ,
+    \S00_AXI_AWADDR[25] , \S00_AXI_AWADDR[26] , \S00_AXI_AWADDR[27] ,
+    \S00_AXI_AWADDR[28] , \S00_AXI_AWADDR[29] , \S00_AXI_AWADDR[30] ,
+    \S00_AXI_AWADDR[31] , S00_AXI_WVALID, \S00_AXI_WDATA[0] ,
+    \S00_AXI_WDATA[1] , \S00_AXI_WDATA[2] , \S00_AXI_WDATA[3] ,
+    \S00_AXI_WDATA[4] , \S00_AXI_WDATA[5] , \S00_AXI_WDATA[6] ,
+    \S00_AXI_WDATA[7] , \S00_AXI_WDATA[8] , \S00_AXI_WDATA[9] ,
+    \S00_AXI_WDATA[10] , \S00_AXI_WDATA[11] , \S00_AXI_WDATA[12] ,
+    \S00_AXI_WDATA[13] , \S00_AXI_WDATA[14] , \S00_AXI_WDATA[15] ,
+    \S00_AXI_WDATA[16] , \S00_AXI_WDATA[17] , \S00_AXI_WDATA[18] ,
+    \S00_AXI_WDATA[19] , \S00_AXI_WDATA[20] , \S00_AXI_WDATA[21] ,
+    \S00_AXI_WDATA[22] , \S00_AXI_WDATA[23] , \S00_AXI_WDATA[24] ,
+    \S00_AXI_WDATA[25] , \S00_AXI_WDATA[26] , \S00_AXI_WDATA[27] ,
+    \S00_AXI_WDATA[28] , \S00_AXI_WDATA[29] , \S00_AXI_WDATA[30] ,
+    \S00_AXI_WDATA[31] , S00_AXI_BREADY, S00_AXI_ARVALID,
+    \S00_AXI_ARADDR[0] , \S00_AXI_ARADDR[1] , \S00_AXI_ARADDR[2] ,
+    \S00_AXI_ARADDR[3] , \S00_AXI_ARADDR[4] , \S00_AXI_ARADDR[5] ,
+    \S00_AXI_ARADDR[6] , \S00_AXI_ARADDR[7] , \S00_AXI_ARADDR[8] ,
+    \S00_AXI_ARADDR[9] , \S00_AXI_ARADDR[10] , \S00_AXI_ARADDR[11] ,
+    \S00_AXI_ARADDR[12] , \S00_AXI_ARADDR[13] , \S00_AXI_ARADDR[14] ,
+    \S00_AXI_ARADDR[15] , \S00_AXI_ARADDR[16] , \S00_AXI_ARADDR[17] ,
+    \S00_AXI_ARADDR[18] , \S00_AXI_ARADDR[19] , \S00_AXI_ARADDR[20] ,
+    \S00_AXI_ARADDR[21] , \S00_AXI_ARADDR[22] , \S00_AXI_ARADDR[23] ,
+    \S00_AXI_ARADDR[24] , \S00_AXI_ARADDR[25] , \S00_AXI_ARADDR[26] ,
+    \S00_AXI_ARADDR[27] , \S00_AXI_ARADDR[28] , \S00_AXI_ARADDR[29] ,
+    \S00_AXI_ARADDR[30] , \S00_AXI_ARADDR[31] , S00_AXI_RREADY,
+    S00_AXI_AWREADY, S00_AXI_WREADY, \S00_AXI_BRESP[0] ,
+    \S00_AXI_BRESP[1] , S00_AXI_BVALID, S00_AXI_ARREADY,
+    \S00_AXI_RDATA[0] , \S00_AXI_RDATA[1] , \S00_AXI_RDATA[2] ,
+    \S00_AXI_RDATA[3] , \S00_AXI_RDATA[4] , \S00_AXI_RDATA[5] ,
+    \S00_AXI_RDATA[6] , \S00_AXI_RDATA[7] , \S00_AXI_RDATA[8] ,
+    \S00_AXI_RDATA[9] , \S00_AXI_RDATA[10] , \S00_AXI_RDATA[11] ,
+    \S00_AXI_RDATA[12] , \S00_AXI_RDATA[13] , \S00_AXI_RDATA[14] ,
+    \S00_AXI_RDATA[15] , \S00_AXI_RDATA[16] , \S00_AXI_RDATA[17] ,
+    \S00_AXI_RDATA[18] , \S00_AXI_RDATA[19] , \S00_AXI_RDATA[20] ,
+    \S00_AXI_RDATA[21] , \S00_AXI_RDATA[22] , \S00_AXI_RDATA[23] ,
+    \S00_AXI_RDATA[24] , \S00_AXI_RDATA[25] , \S00_AXI_RDATA[26] ,
+    \S00_AXI_RDATA[27] , \S00_AXI_RDATA[28] , \S00_AXI_RDATA[29] ,
+    \S00_AXI_RDATA[30] , \S00_AXI_RDATA[31] , \S00_AXI_RRESP[0] ,
+    \S00_AXI_RRESP[1] , S00_AXI_RVALID  );
+  input  clock;
+  input  ACLK, ARESETn, S00_AXI_AWVALID, \S00_AXI_AWADDR[0] ,
+    \S00_AXI_AWADDR[1] , \S00_AXI_AWADDR[2] , \S00_AXI_AWADDR[3] ,
+    \S00_AXI_AWADDR[4] , \S00_AXI_AWADDR[5] , \S00_AXI_AWADDR[6] ,
+    \S00_AXI_AWADDR[7] , \S00_AXI_AWADDR[8] , \S00_AXI_AWADDR[9] ,
+    \S00_AXI_AWADDR[10] , \S00_AXI_AWADDR[11] , \S00_AXI_AWADDR[12] ,
+    \S00_AXI_AWADDR[13] , \S00_AXI_AWADDR[14] , \S00_AXI_AWADDR[15] ,
+    \S00_AXI_AWADDR[16] , \S00_AXI_AWADDR[17] , \S00_AXI_AWADDR[18] ,
+    \S00_AXI_AWADDR[19] , \S00_AXI_AWADDR[20] , \S00_AXI_AWADDR[21] ,
+    \S00_AXI_AWADDR[22] , \S00_AXI_AWADDR[23] , \S00_AXI_AWADDR[24] ,
+    \S00_AXI_AWADDR[25] , \S00_AXI_AWADDR[26] , \S00_AXI_AWADDR[27] ,
+    \S00_AXI_AWADDR[28] , \S00_AXI_AWADDR[29] , \S00_AXI_AWADDR[30] ,
+    \S00_AXI_AWADDR[31] , S00_AXI_WVALID, \S00_AXI_WDATA[0] ,
+    \S00_AXI_WDATA[1] , \S00_AXI_WDATA[2] , \S00_AXI_WDATA[3] ,
+    \S00_AXI_WDATA[4] , \S00_AXI_WDATA[5] , \S00_AXI_WDATA[6] ,
+    \S00_AXI_WDATA[7] , \S00_AXI_WDATA[8] , \S00_AXI_WDATA[9] ,
+    \S00_AXI_WDATA[10] , \S00_AXI_WDATA[11] , \S00_AXI_WDATA[12] ,
+    \S00_AXI_WDATA[13] , \S00_AXI_WDATA[14] , \S00_AXI_WDATA[15] ,
+    \S00_AXI_WDATA[16] , \S00_AXI_WDATA[17] , \S00_AXI_WDATA[18] ,
+    \S00_AXI_WDATA[19] , \S00_AXI_WDATA[20] , \S00_AXI_WDATA[21] ,
+    \S00_AXI_WDATA[22] , \S00_AXI_WDATA[23] , \S00_AXI_WDATA[24] ,
+    \S00_AXI_WDATA[25] , \S00_AXI_WDATA[26] , \S00_AXI_WDATA[27] ,
+    \S00_AXI_WDATA[28] , \S00_AXI_WDATA[29] , \S00_AXI_WDATA[30] ,
+    \S00_AXI_WDATA[31] , S00_AXI_BREADY, S00_AXI_ARVALID,
+    \S00_AXI_ARADDR[0] , \S00_AXI_ARADDR[1] , \S00_AXI_ARADDR[2] ,
+    \S00_AXI_ARADDR[3] , \S00_AXI_ARADDR[4] , \S00_AXI_ARADDR[5] ,
+    \S00_AXI_ARADDR[6] , \S00_AXI_ARADDR[7] , \S00_AXI_ARADDR[8] ,
+    \S00_AXI_ARADDR[9] , \S00_AXI_ARADDR[10] , \S00_AXI_ARADDR[11] ,
+    \S00_AXI_ARADDR[12] , \S00_AXI_ARADDR[13] , \S00_AXI_ARADDR[14] ,
+    \S00_AXI_ARADDR[15] , \S00_AXI_ARADDR[16] , \S00_AXI_ARADDR[17] ,
+    \S00_AXI_ARADDR[18] , \S00_AXI_ARADDR[19] , \S00_AXI_ARADDR[20] ,
+    \S00_AXI_ARADDR[21] , \S00_AXI_ARADDR[22] , \S00_AXI_ARADDR[23] ,
+    \S00_AXI_ARADDR[24] , \S00_AXI_ARADDR[25] , \S00_AXI_ARADDR[26] ,
+    \S00_AXI_ARADDR[27] , \S00_AXI_ARADDR[28] , \S00_AXI_ARADDR[29] ,
+    \S00_AXI_ARADDR[30] , \S00_AXI_ARADDR[31] , S00_AXI_RREADY;
+  output S00_AXI_AWREADY, S00_AXI_WREADY, \S00_AXI_BRESP[0] ,
+    \S00_AXI_BRESP[1] , S00_AXI_BVALID, S00_AXI_ARREADY,
+    \S00_AXI_RDATA[0] , \S00_AXI_RDATA[1] , \S00_AXI_RDATA[2] ,
+    \S00_AXI_RDATA[3] , \S00_AXI_RDATA[4] , \S00_AXI_RDATA[5] ,
+    \S00_AXI_RDATA[6] , \S00_AXI_RDATA[7] , \S00_AXI_RDATA[8] ,
+    \S00_AXI_RDATA[9] , \S00_AXI_RDATA[10] , \S00_AXI_RDATA[11] ,
+    \S00_AXI_RDATA[12] , \S00_AXI_RDATA[13] , \S00_AXI_RDATA[14] ,
+    \S00_AXI_RDATA[15] , \S00_AXI_RDATA[16] , \S00_AXI_RDATA[17] ,
+    \S00_AXI_RDATA[18] , \S00_AXI_RDATA[19] , \S00_AXI_RDATA[20] ,
+    \S00_AXI_RDATA[21] , \S00_AXI_RDATA[22] , \S00_AXI_RDATA[23] ,
+    \S00_AXI_RDATA[24] , \S00_AXI_RDATA[25] , \S00_AXI_RDATA[26] ,
+    \S00_AXI_RDATA[27] , \S00_AXI_RDATA[28] , \S00_AXI_RDATA[29] ,
+    \S00_AXI_RDATA[30] , \S00_AXI_RDATA[31] , \S00_AXI_RRESP[0] ,
+    \S00_AXI_RRESP[1] , S00_AXI_RVALID;
+  reg \S00_AXI_BRESP[0] , \S00_AXI_BRESP[1] , \write_response[0] ,
+    \write_response[1] , write_in_progress;
+  wire new_n199, new_n200, new_n201, new_n202, new_n203, new_n204, new_n205,
+    new_n206, new_n208, new_n209, new_n210, new_n212, new_n213, new_n214,
+    new_n215, new_n217, new_n218, new_n219, new_n221, new_n222, n290, n294,
+    n298, n303, n308;
+  INVX1    g00(.A(ARESETn), .Y(new_n199));
+  NAND2X1  g01(.A(write_in_progress), .B(S00_AXI_BREADY), .Y(new_n200));
+  MX2X1    g02(.A(\write_response[0] ), .B(\S00_AXI_BRESP[0] ), .S0(new_n200), .Y(new_n201));
+  AND2X1   g03(.A(write_in_progress), .B(S00_AXI_WVALID), .Y(new_n202));
+  MX2X1    g04(.A(new_n201), .B(\S00_AXI_BRESP[0] ), .S0(new_n202), .Y(new_n203));
+  INVX1    g05(.A(write_in_progress), .Y(new_n204));
+  AND2X1   g06(.A(new_n204), .B(S00_AXI_AWVALID), .Y(new_n205));
+  MX2X1    g07(.A(new_n203), .B(\S00_AXI_BRESP[0] ), .S0(new_n205), .Y(new_n206));
+  MX2X1    g08(.A(new_n206), .B(\S00_AXI_BRESP[0] ), .S0(new_n199), .Y(n290));
+  MX2X1    g09(.A(\write_response[1] ), .B(\S00_AXI_BRESP[1] ), .S0(new_n200), .Y(new_n208));
+  MX2X1    g10(.A(new_n208), .B(\S00_AXI_BRESP[1] ), .S0(new_n202), .Y(new_n209));
+  MX2X1    g11(.A(new_n209), .B(\S00_AXI_BRESP[1] ), .S0(new_n205), .Y(new_n210));
+  MX2X1    g12(.A(new_n210), .B(\S00_AXI_BRESP[1] ), .S0(new_n199), .Y(n294));
+  AND2X1   g13(.A(write_in_progress), .B(S00_AXI_BREADY), .Y(new_n212));
+  MX2X1    g14(.A(\write_response[0] ), .B(\S00_AXI_WDATA[31] ), .S0(new_n212), .Y(new_n213));
+  MX2X1    g15(.A(new_n213), .B(\write_response[0] ), .S0(new_n202), .Y(new_n214));
+  MX2X1    g16(.A(new_n214), .B(\write_response[0] ), .S0(new_n205), .Y(new_n215));
+  MX2X1    g17(.A(new_n215), .B(\write_response[0] ), .S0(new_n199), .Y(n298));
+  MX2X1    g18(.A(\write_response[1] ), .B(\S00_AXI_WDATA[31] ), .S0(new_n212), .Y(new_n217));
+  MX2X1    g19(.A(new_n217), .B(\write_response[1] ), .S0(new_n202), .Y(new_n218));
+  MX2X1    g20(.A(new_n218), .B(\write_response[1] ), .S0(new_n205), .Y(new_n219));
+  MX2X1    g21(.A(new_n219), .B(\write_response[1] ), .S0(new_n199), .Y(n303));
+  INVX1    g22(.A(new_n205), .Y(new_n221));
+  OAI21X1  g23(.A0(new_n202), .A1(new_n200), .B0(write_in_progress), .Y(new_n222));
+  AOI21X1  g24(.A0(new_n222), .A1(new_n221), .B0(new_n199), .Y(n308));
+  ZERO     g25(.Y(S00_AXI_AWREADY));
+  ZERO     g26(.Y(S00_AXI_WREADY));
+  ZERO     g27(.Y(S00_AXI_BVALID));
+  ZERO     g28(.Y(S00_AXI_ARREADY));
+  ZERO     g29(.Y(\S00_AXI_RDATA[0] ));
+  ZERO     g30(.Y(\S00_AXI_RDATA[1] ));
+  ZERO     g31(.Y(\S00_AXI_RDATA[2] ));
+  ZERO     g32(.Y(\S00_AXI_RDATA[3] ));
+  ZERO     g33(.Y(\S00_AXI_RDATA[4] ));
+  ZERO     g34(.Y(\S00_AXI_RDATA[5] ));
+  ZERO     g35(.Y(\S00_AXI_RDATA[6] ));
+  ZERO     g36(.Y(\S00_AXI_RDATA[7] ));
+  ZERO     g37(.Y(\S00_AXI_RDATA[8] ));
+  ZERO     g38(.Y(\S00_AXI_RDATA[9] ));
+  ZERO     g39(.Y(\S00_AXI_RDATA[10] ));
+  ZERO     g40(.Y(\S00_AXI_RDATA[11] ));
+  ZERO     g41(.Y(\S00_AXI_RDATA[12] ));
+  ZERO     g42(.Y(\S00_AXI_RDATA[13] ));
+  ZERO     g43(.Y(\S00_AXI_RDATA[14] ));
+  ZERO     g44(.Y(\S00_AXI_RDATA[15] ));
+  ZERO     g45(.Y(\S00_AXI_RDATA[16] ));
+  ZERO     g46(.Y(\S00_AXI_RDATA[17] ));
+  ZERO     g47(.Y(\S00_AXI_RDATA[18] ));
+  ZERO     g48(.Y(\S00_AXI_RDATA[19] ));
+  ZERO     g49(.Y(\S00_AXI_RDATA[20] ));
+  ZERO     g50(.Y(\S00_AXI_RDATA[21] ));
+  ZERO     g51(.Y(\S00_AXI_RDATA[22] ));
+  ZERO     g52(.Y(\S00_AXI_RDATA[23] ));
+  ZERO     g53(.Y(\S00_AXI_RDATA[24] ));
+  ZERO     g54(.Y(\S00_AXI_RDATA[25] ));
+  ZERO     g55(.Y(\S00_AXI_RDATA[26] ));
+  ZERO     g56(.Y(\S00_AXI_RDATA[27] ));
+  ZERO     g57(.Y(\S00_AXI_RDATA[28] ));
+  ZERO     g58(.Y(\S00_AXI_RDATA[29] ));
+  ZERO     g59(.Y(\S00_AXI_RDATA[30] ));
+  ZERO     g60(.Y(\S00_AXI_RDATA[31] ));
+  ZERO     g61(.Y(\S00_AXI_RRESP[0] ));
+  ZERO     g62(.Y(\S00_AXI_RRESP[1] ));
+  ZERO     g63(.Y(S00_AXI_RVALID));
+  always @ (posedge clock) begin
+    \S00_AXI_BRESP[0]  <= n290;
+    \S00_AXI_BRESP[1]  <= n294;
+    \write_response[0]  <= n298;
+    \write_response[1]  <= n303;
+    write_in_progress <= n308;
+  end
+endmodule
+
+
